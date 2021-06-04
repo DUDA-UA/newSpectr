@@ -1,0 +1,13 @@
+{
+  "name": "Photo-spectrum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+  },
+  "author": "DUDA",
+  "license": "ISC",
+  "dependencies": {
+    "reset-scss": "^1.0.0"
+  }
+}
