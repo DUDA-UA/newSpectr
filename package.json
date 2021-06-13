@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "DUDA",
   "license": "ISC",
   "dependencies": {
     "reset-scss": "^1.0.0"
+  },
+  "devDependencies": {
+    "critical": "^2.0.0-27"
   }
 }
