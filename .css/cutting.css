@@ -1,0 +1,21 @@
+.products-link .order-img {
+  display: inline-block;
+  width: 40px;
+  position: relative;
+  top: 15px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.products-link:hover .order-img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#cutting-1 {
+  width: 360px;
+}
+
+#cutting-3 {
+  width: 330px;
+}

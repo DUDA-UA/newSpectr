@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #445566;
+  color: #f7e6e6;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  position: relative;
+  z-index: 50;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body._active {
+  overflow: hidden !important;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.content {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.go-top {
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 600px;
+  right: 25px;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 100;
+}
+
+.go-top:hover {
+  border: 2px solid #fa0ab2;
+}
+
+.go-top .fa-arrow-up {
+  color: blue;
+  font-size: 32px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.go-top:hover .fa-arrow-up {
+  color: #fa0ab2;
+}
+
+.header-mobile {
+  position: relative;
+  z-index: 200;
+  overflow: hidden;
+}
+
+.header-mobile .mobile-menu {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0px 16px;
+  top: 0;
+  background-color: transparent;
+  left: 0;
+  right: 0;
+  height: 50px;
+  opacity: .9;
+  font-family: "Balsamiq Sans";
+}
+
+.header-mobile .mobile-menu__icon {
+  position: relative;
+  width: 50px;
+  height: 36px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+  z-index: 100;
+  margin-top: 40px;
+}
+
+.header-mobile .mobile-menu__icon span, .header-mobile .mobile-menu__icon::after, .header-mobile .mobile-menu__icon::before {
+  position: absolute;
+  left: 0;
+  background: tomato;
+  width: 100%;
+  height: 4px;
+  -webkit-transition: all .4s ease 0s;
+  transition: all .4s ease 0s;
+}
+
+.header-mobile .mobile-menu__icon::after {
+  content: '';
+  top: 0px;
+}
+
+.header-mobile .mobile-menu__icon::before {
+  content: '';
+  bottom: 0px;
+}
+
+.header-mobile .mobile-menu__icon span {
+  top: 50%;
+  -webkit-transform: scale(1) translate(0px, -50%);
+          transform: scale(1) translate(0px, -50%);
+}
+
+.header-mobile .mobile-menu__container {
+  position: fixed;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 0;
+  opacity: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
+  overflow: hidden;
+  background-color: #071338;
+  z-index: 2;
+}
+
+.header-mobile .mobile-menu__list {
+  -webkit-transition: .5s;
+  transition: .5s;
+  list-style: none;
+  padding-left: 0;
+  padding: 100px 0px 50px 0px;
+}
+
+.header-mobile .mobile-menu__item {
+  font-size: 26px;
+  padding-bottom: 40px;
+}
+
+.header-mobile .mobile-menu__item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-mobile .mobile-menu__item a:hover {
+  color: #beca0f;
+}
+
+.header-mobile .mobile-menu__link:hover, .header-mobile .mobile-menu__link:active {
+  color: white;
+}
+
+.header-mobile .mobile-menu__container._active {
+  height: 100%;
+  overflow: scroll;
+}
+
+.header-mobile .mobile-menu__icon._active {
+  margin-top: 80px;
+}
+
+.header-mobile .mobile-menu__icon._active span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.header-mobile .mobile-menu__icon._active::before, .header-mobile .mobile-menu__icon._active::after {
+  top: 0;
+}
+
+.header-mobile .mobile-menu__icon._active::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  background: white;
+}
+
+.header-mobile .mobile-menu__icon._active::before {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  background: white;
+}
